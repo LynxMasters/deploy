@@ -186,4 +186,7 @@ GitHub.sublime-settings
 # Sonarlint plugin
 
 
+.idea/
+.idea/*
+
 # End of https://www.gitignore.io/api/macos,webstorm,intellij,sublimetext
