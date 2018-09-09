@@ -31,6 +31,7 @@ mkdir ./tmp
 echo "Backing up Uploads"
 cp -r ./lynxmasters-ui/dist/static/uploads ./tmp
 cd lynxmasters-ui
+echo "Pulling latest UI changes...."
 git pull
 echo "Building Lynxmasters UI...."
 npm install --production
@@ -53,6 +54,7 @@ else
 fi
 
 cd lynxmasters-api
+echo "Pulling latest API changes...."
 git pull
 echo "Building API"
 cp example.env .env
