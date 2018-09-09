@@ -39,8 +39,18 @@ cd ..
 echo "Put images back"
 cp -r ./tmp ./lynxmasters-ui/dist/static/uploads
 rm -r ./tmp
-echo "Copying Send Grid env..."
-cp sendgrid.env ./lynxmasters-api/config/
+
+echo "Checking for SendGrid env...."
+if [ ! -f ./lynxmasters-api/config/sendgrid.env ];
+then
+    echo "SendGrid API keys not found!"
+    echo "Copying SendGrid env to config directory"
+    cp sendgrid.env ./lynxmasters-api/config/
+else
+    echo "SendGrid env exists."
+    echo "Stepping into API directory...."
+fi
+
 cd lynxmasters-api
 echo "Building API"
 cp example.env .env
