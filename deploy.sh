@@ -39,7 +39,7 @@ npm run build
 mkdir -p ./dist/static/uploads
 cd ..
 echo "Put images back"
-cp -r ./tmp ./lynxmasters-ui/dist/static/uploads
+cp -r ./tmp/. ./lynxmasters-ui/dist/static/uploads
 rm -r ./tmp
 
 echo "Checking for SendGrid env...."
