@@ -57,7 +57,7 @@ cd lynxmasters-api
 echo "Pulling latest API changes...."
 git pull
 echo "Building API"
-cp example.env .env
+cp PROD.env .env
 npm install --production
 echo "Starting API"
 forever stopall
