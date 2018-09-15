@@ -36,7 +36,6 @@ git pull
 echo "Building Lynxmasters UI...."
 npm install --production
 npm run build
-mkdir -p ./dist/static/uploads
 cd ..
 echo "Put images back"
 cp -r ./tmp/. ./lynxmasters-ui/dist/static/
